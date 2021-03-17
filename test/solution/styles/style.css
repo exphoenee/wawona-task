@@ -84,7 +84,7 @@ section.content {
 }
 
 .user-message {
-  color: #3f2;
+  color: #3c2;
   text-align: center;
   background-color: white;
   padding: 5px;
@@ -92,7 +92,50 @@ section.content {
   box-shadow: 1px 2px 5px black;
 }
 
+.message-box {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  padding: 15px;
+  opacity: 0;
+  -webkit-animation-name: hide;
+  animation-name: hide;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .lotery-numbers {
+  margin: 40px auto 40px auto;
   padding: 0;
   list-style: none;
   display: flex;
@@ -122,8 +165,7 @@ section.content {
 .logout-btn {
   display: block;
   color: white;
-  margin-left: auto;
-  margin-top: 100px;
+  margin: 10px auto 10px auto;
   background-color: #f33;
   box-shadow: 1px 2px 5px gray;
 }

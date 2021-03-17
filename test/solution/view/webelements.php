@@ -31,6 +31,15 @@ class WebElements {
   }
 
   // createing html element of a submit button (button + submitId)
+  public static function showMessage($message, $class = null) {
+    $html =
+      '<div class="message-box">
+        <p class="'.$class.'">'.$message.'</p>
+      </div>';
+    return $html;
+  }
+
+  // createing html element of a submit button (button + submitId)
   public static function submitButton($text, $name, $class = null) {
     $html = self::submitId(rand());
     $html .= self::button($text, $name, $class);

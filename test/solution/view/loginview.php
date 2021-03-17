@@ -21,8 +21,7 @@
               </div>';
       // here is the login message showen
       if ($message) {
-        $html .=
-              '<p class="error-message">'.$message.'</p>';
+        $html .= WebElements::showMessage($message, "error-message");
       }
 
       // here is the login button added

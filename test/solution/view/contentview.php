@@ -32,12 +32,19 @@
 
 
     // generating the content view
-    public static function showContent() {
+    public static function showContent($message) {
+      $html = '';
 
-      $html =
+
+      $html .=
       '<div class="container">
-        <section class="content">
-          <h1>Lottószámok:</h1>';
+      <section class="content">';
+      $html .=
+      '<h1>Lottószámok:</h1>';
+
+      if ($message) {
+        $html .= WebElements::showMessage($message, "user-message");
+      }
 
       $html .= self::showLotteryNumbers();
       $html .= self::showLogoutForm();

@@ -16,7 +16,7 @@
   // this is the only one decision in the application therefore I leave it here
   $page = '';
   if (User::hasLoggedUser()) {
-    $page .= ContentContorller::createContent();
+    $page .= ContentContorller::createContent($message);
   } else {
     $page .= loginView::showLoginForm($message);
   }
