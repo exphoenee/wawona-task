@@ -1,3 +1,3 @@
-login password
-lali  makkancs
-total szivas
+login	$2y$10$jHau/jyFnkWp50FrZPA7rulyC.mnNzOEfeGqfnoO5VOaMJU6UxQbS
+lali	$2y$10$yfe7SL78c8DqY.f/42ETKuKIptdjFdSaIY/ebTvHgQOem0yoFX3Wm
+total	$2y$10$xjvBeM2144Zpz3vZRiqVU.R.GA7dwRDSK5FZ/kuTxagN4QcQLomdK

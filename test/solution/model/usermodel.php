@@ -2,6 +2,7 @@
 
 class userModel {
 
+  // getting the user database in array in following structure ["username" => "password"]
   public function getUsers() {
     $file_content = file_get_contents('database\\user.txt');
 
@@ -14,20 +15,6 @@ class userModel {
     }
 
     return $users;
-  }
-
-  public function getUser($userData) {
-    $loginOk = null;
-
-    $users = self::getUsers();
-
-    if (isset($users[$userData['username']])) {
-      $loginOk = $users[$userData['username']] == $userData['password'];
-      User::setUserLoggedIn();
-      var_dump(User::hasLoggedUser());
-    }
-
-    return $loginOk;
   }
 
 }

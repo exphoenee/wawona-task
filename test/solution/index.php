@@ -1,35 +1,30 @@
 <?php
-  session_start();
-  date_default_timezone_set("Europe/Budapest");
+  /*
+    * set the timezone
+    * the init loads the external classses
+    * starts the session and
+    * checks the submit ID
+  */
+  require 'system/initialize.php';
 
-  require_once 'system/request.php';
-  require_once 'system/auth.php';
-  require_once 'system/user.php';
-  require_once 'system/lottery.php';
+  // handling the login and logout and generating user messages
+  $message = User::handleLogoutAndLogout();
 
-  require_once 'model/usermodel.php';
-
-  require_once 'view/webelements.php';
-  require_once 'view/pageview.php';
-  require_once 'view/loginview.php';
-  require_once 'view/contentview.php';
-
-  require_once 'controller/logincontroller.php';
-  require_once 'controller/contentcontroller.php';
-
-  Request::SubmitCheck();
-
+  // header + open html body tag
   $pageStart = PageView::showHTMLBegin();
 
+  // this is the only one decision in the application therefore I leave it here
   $page = '';
   if (User::hasLoggedUser()) {
     $page .= ContentContorller::createContent();
   } else {
-    $page .= LoginController::createLogin();
+    $page .= loginView::showLoginForm($message);
   }
 
+  // header + open html body tag
   $pageEnd = PageView::showHTMLEnd();
 
+  // spread the words out
   echo $pageStart.$page.$pageEnd;
 
 ?>

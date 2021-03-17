@@ -1,0 +1,3 @@
+login	$2y$10$Ijdd4wg6O8UakvVAANFj3eY5/OTHqUc2fguB1OMHe2TLwAjLHl7Bq
+lali	$2y$10$Q2rZ4w/G/bIxoHHty.bMgu0aQNrZvz.mJ53a5JqFZsBRnmphI6Vfu
+total	$2y$10$3RHnKitxRcqZa83HRB9tSO4zpvqaBSp/IzjohxO55d8JQGD9rMySa

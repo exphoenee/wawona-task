@@ -24,8 +24,15 @@ body {
   padding: 20px;
   width: 100%;
   border-radius: 10px;
-  box-shadow: 1px 2px 5px grey;
-  background: grey;
+  box-shadow: 1px 2px 5px #16a;
+  background: #38f;
+}
+
+.form-wrapper h1,
+label {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .input-field {
@@ -38,27 +45,23 @@ body {
   padding: 5px;
   border: 0;
   border-radius: 5px;
-  box-shadow: 1px 2px 5px grey;
+  box-shadow: 1px 2px 5px #16a;
 }
 
 button {
   border: 0;
   margin: 20px auto 0px auto;
-  box-shadow: 1px 2px 5px grey;
+  box-shadow: 1px 2px 5px #16a;
   border-radius: 5px;
   width: 50%;
   max-width: 100px;
   padding: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-.form-container button:hover {
-  border: 0;
-  margin: 20px auto 0px auto;
+button:hover {
   box-shadow: 1px 2px 5px black, 2px 5px 10px darkgray;
   transform: translate(1px, 1px);
-  border-radius: 5px;
-  width: 50%;
-  padding: 5px;
 }
 
 section.content {
@@ -72,9 +75,18 @@ section.content {
 }
 
 .error-message {
-  color: darkred;
+  color: #f32;
   text-align: center;
-  background-color: lightgray;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px black;
+}
+
+.user-message {
+  color: #3f2;
+  text-align: center;
+  background-color: white;
   padding: 5px;
   border-radius: 5px;
   box-shadow: 1px 2px 5px black;
@@ -93,14 +105,31 @@ section.content {
 }
 
 .lotery-number {
-  border: 2px solid darkgray;
-  box-shadow: 1px 2px 5px darkgray;
+  background: #38f;
+  color: white;
+  text-shadow: 1px 1px 3px;
+  box-shadow: 2px 3px 7px gray, -1px 1px 3px gray, 1px 2px 5px #7bf inset,
+    -1px -2px 3px #5af inset;
   display: block;
   text-align: center;
   width: 1rem;
   height: 1rem;
   padding: 1rem;
-  background: gray;
   margin-right: 5px;
   border-radius: 50%;
+}
+
+.logout-btn {
+  display: block;
+  color: white;
+  margin-left: auto;
+  margin-top: 100px;
+  background-color: #f33;
+  box-shadow: 1px 2px 5px gray;
+}
+
+.login-btn {
+  color: white;
+  background-color: #33f;
+  box-shadow: 1px 2px 5px #16a;
 }

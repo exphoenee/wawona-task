@@ -2,9 +2,12 @@
 
   class LoginController {
 
+    // validating the login of user
     public static function validateLogin($userData) {
+      // this message never will be shown...if i have luck... :)
       $message = 'Valami hiba történt...';
-      if (userModel::getUser($userData)) {
+
+      if (Auth::loginUser($userData)) {
         $message = 'Sikeres bejelentkezés!';
       } else {
         $message = 'Hibás e-mail cím vagy jelszó!';
@@ -13,15 +16,5 @@
       return $message;
     }
 
-    public static function createLogin  () {
-      $message = null;
-
-      if (Request::post('loginSent')) {
-        $postdata = Request::post();
-        $message = self::validateLogin($postdata);
-      }
-
-      return loginView::showLoginForm($message);
-    }
   }
 ?>

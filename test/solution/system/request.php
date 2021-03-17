@@ -2,6 +2,7 @@
 
   class Request {
 
+    // get the get informations
     public static function get($param) {
       if (isset($_GET[$param])) {
         return $_GET[$param];
@@ -9,6 +10,7 @@
       return null;
     }
 
+    // get the post informations
     public static function post($param = null) {
       if ($param !== null) {
         if (isset($_POST[$param])) {
